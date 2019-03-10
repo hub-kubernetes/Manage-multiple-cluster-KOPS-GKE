@@ -78,8 +78,8 @@ Managing multi cloud cluster using KOPS + GKE
 
     1.  Execute the below command to create a GKE standard 3 node cluster 
     
-        gcloud beta container --project "gcp-1-227614" clusters create "standard-cluster-1" --zone "us-east1-b" --username "admin" --cluster-version "1.11.6-gke.2" --machine-type "n1-standard-1" --image-type "COS" --disk-type "pd-standard" --disk-size "100" --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --num-nodes "3" --enable-cloud-logging --enable-cloud-monitoring --no-enable-ip-alias --network "projects/gcp-1-227614/global/networks/default" --subnetwork "projects/gcp-1-227614/regions/us-east1/subnetworks/default" --addons HorizontalPodAutoscaling,HttpLoadBalancing --enable-autoupgrade --enable-autorepair
-        
+       gcloud beta container --project "azurestack" clusters create "standard-cluster-1" --zone "us-central1-a" --username "admin" --cluster-version "1.11.7-gke.4" --machine-type "custom-1-2048" --image-type "COS" --disk-type "pd-standard" --disk-size "20" --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --num-nodes "3" --enable-cloud-logging --enable-cloud-monitoring --no-enable-ip-alias --network "projects/azurestack/global/networks/default" --subnetwork "projects/azurestack/regions/us-central1/subnetworks/default" --addons HorizontalPodAutoscaling,HttpLoadBalancing --enable-autoupgrade --enable-autorepair
+       
     2.  Verify the cluster using kubectl command 
     
 ##  F.  Save config of GKE cluster
